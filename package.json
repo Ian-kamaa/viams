@@ -19,6 +19,7 @@
     "@types/node": "^20.10.8",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
+    "@vercel/blob": "^0.23.4",
     "acorn": "^8.10.0",
     "acorn-jsx": "^5.3.2",
     "autoprefixer": "^10.4.7",
@@ -46,6 +47,8 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
+    "file": "^0.2.2",
+    "loader": "^2.1.1",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "sharp": "^0.33.4"

@@ -11,11 +11,6 @@ import remarkUnwrapImages from 'remark-unwrap-images'
 import shiki from 'shiki'
 import { unifiedConditional } from 'unified-conditional'
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-}
-
 function remarkMDXLayout(source, metaName) {
   let parser = Parser.extend(jsx())
   let parseOptions = { ecmaVersion: 'latest', sourceType: 'module' }
@@ -40,6 +35,14 @@ function remarkMDXLayout(source, metaName) {
     )
   }
 }
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+    images: {
+      domains: ['https://4meyxiczirqpoogi.public.blob.vercel-storage.com/viams%20promo-rJU1yh2TBAJSvD9kEtBVPIvEKBSbVL.mp4'], // Replace with your actual Vercel Blob domain
+    },
+  }
 
 export default async function config() {
   let highlighter = await shiki.getHighlighter({
