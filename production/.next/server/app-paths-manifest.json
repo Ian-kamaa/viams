@@ -1,0 +1,6 @@
+{
+  "/page": "app/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/blog/IELTS-training/page": "app/blog/IELTS-training/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

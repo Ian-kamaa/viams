@@ -1,10 +1,10 @@
-import { put, del } from '@vercel/blob';
+import { put, del, PutBlobResult } from '@vercel/blob';
 
-export async function uploadVideo(file) {
-  const blob = await put(file.name, file, { access: 'public' });
+export async function uploadVideo(file: File): Promise<string> {
+  const blob: PutBlobResult = await put(file.name, file, { access: 'public' });
   return blob.url;
 }
 
-export async function deleteVideo(url) {
+export async function deleteVideo(url: string): Promise<void> {
   await del(url);
 }
